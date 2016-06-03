@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root '/resumes#index'
+  get 'resumes/:id', to: 'resumes#show'
   get '/resumes' => 'resumes#index'
   get 'resumes/:id/edit', to: 'resumes#edit'
   patch 'resumes/:id', to: 'resumes#update'

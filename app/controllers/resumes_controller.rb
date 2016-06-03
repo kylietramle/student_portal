@@ -1,4 +1,9 @@
 class ResumesController < ApplicationController
+
+  def show
+    @resume = Unirest.get("#{ENV['DOMAIN']}/resumes/#{params[:id]}.json").body
+  end
+
   def index
     @resumes = Unirest.get("#{ENV['API']}.json", headers:{"Accept" => "application/json"}).body
   end
