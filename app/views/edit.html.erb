@@ -1,0 +1,52 @@
+<h1>Edit Resume</h1>
+<%= form_tag  "/resumes/#{@resume.id}", method: :patch do%>
+  <div>
+    <%= label_tag :first_name %>
+    <%= text_field_tag :first_name, "#{@resume.first_name}" %>
+  </div>
+  <div>
+    <%= label_tag :last_name %>
+    <%= text_field_tag :last_name, "#{@resume.last_name}" %>
+  </div>
+  <div>
+    <%= label_tag :email %>
+    <%= text_field_tag :email, "#{@resume.email}" %>
+  </div>
+  <div>
+    <%= label_tag :password %>
+    <%= text_field_tag :password, "#{@resume.password}" %>
+  </div>
+  <div>
+    <%= label_tag :phone_number %>
+    <%= text_field_tag :phone_number, "#{@resume.phone_number}" %>
+  </div>
+  <div>
+    <%= label_tag :short_bio %>
+    <%= text_field_tag :short_bio, "#{@resume.short_bio}" %>
+  </div>
+  <div>
+    <%= label_tag :linkedin_url %>
+    <%= text_field_tag :linkedin_url, "#{@resume.linkedin_url}" %>
+  </div>
+  <div>
+    <%= label_tag :twitter_handle %>
+    <%= text_field_tag :twitter_handle, "#{@resume.twitter_handle}" %>
+  </div>
+  <div>
+    <%= label_tag :wordpress_url %>
+    <%= text_field_tag :wordpress_url, "#{@resume.wordpress_url}" %>
+  </div>
+  <div>
+    <%= label_tag :resume_url %>
+    <%= text_field_tag :resume_url, "#{@resume.resume_url}" %>
+  </div>
+  <div>
+    <%= label_tag :github_url %>
+    <%= text_field_tag :github_url, "#{@resume.github_url}" %>
+  </div>
+  <div>
+    <%= label_tag :photo %>
+    <%= text_field_tag :photo, "#{@resume.photo}" %>
+  </div>
+<%= submit_tag "Update Resume" %>
+<% end %>
