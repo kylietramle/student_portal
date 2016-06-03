@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+
+  root '/resumes#index'
+  get '/resumes' => 'resumes#index'
   get 'resumes/:id/edit', to: 'resumes#edit'
   patch 'resumes/:id', to: 'resumes#update'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
