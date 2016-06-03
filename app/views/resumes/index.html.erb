@@ -1,0 +1,45 @@
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Phone Number</th>
+    <th>Short Bio</th>
+    <th>Linkedin</th>
+    <th>Twitter</th>
+    <th>Wordpress</th>
+    <th>Resume</th>
+    <th>GitHub</th>
+    <th>Photo</th>
+  </tr>
+  <% @students.each do |student| %>
+  <tr>
+    <td><%= student.first_name %></td>
+    <td><%= student.last_name %></td>
+    <td><%= student.email %></td>
+    <td><%= student.phone_number %></td>
+    <td><%= student.short_bio %></td>
+    <td><%= student.linkedin_url %></td>
+    <td><%= student.twitter_handle%></td>
+    <td><%= student.wordpress_url %></td>
+    <td><%= student.resume_url %></td>
+    <td><%= student.github_url %></td>
+    <td><%= student.photo %></td>
+  <% end %>
+</table>
+
+    t.integer :experience_id
+      t.integer :education_id
+      t.integer :capstone_id
+      t.string :first_name
+      t.string :last_name
+      t.string :email
+      t.string :password
+      t.string :phone_number
+      t.text :short_bio
+      t.string :linkedin_url
+      t.string :twitter_handle
+      t.string :wordpress_url
+      t.string :resume_url
+      t.string :github_url
+      t.string :photo
